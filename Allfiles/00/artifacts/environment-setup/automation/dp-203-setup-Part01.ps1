@@ -55,7 +55,7 @@ if($subs.GetType().IsArray -and $subs.length -gt 1){
 
 $userName = ((az ad signed-in-user show) | ConvertFrom-JSON).UserPrincipalName
 write-host "User Name: $userName"
-$userId = az ad signed-in-user show --query objectId -o tsv
+$userId = az ad signed-in-user show --query id -o tsv
 Write-Host "User ID: $userId"
 
 # Prompt user for a password for the SQL Database
